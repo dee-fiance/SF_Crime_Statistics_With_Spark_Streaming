@@ -24,7 +24,8 @@ Provide statistical analysis of San Francisco crime incidents data using Apache 
 5. Run Spark job (pwd=<path-to-project>/SF_Crime_Statistics_With_Spark_Streaming/sf-crime-data-project-files):<br>
    spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.4.5 --master local[*] data_stream.py
 
-## Screenshots
+## Screenshots 
+Screenshots can be found in screenshots.zip
 
 ### Kafka Consumer Console Output
 
