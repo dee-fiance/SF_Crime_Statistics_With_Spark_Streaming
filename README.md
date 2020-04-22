@@ -9,11 +9,11 @@ Provide statistical analysis of San Francisco crime incidents data using Apache 
 
 ## Run the Streaming application
 
-1. Start Zookeeper:<br>
-   /usr/bin/zookeeper-server-start config/zookeeper.properties
+1. Start Zookeeper: (pwd=<path-to-kafka>/kafka_2.11-2.3.0/)<br>
+   bin/zookeeper-server-start config/zookeeper.properties
 
-2. Start Kafka server:<br>
-   /usr/bin/kafka-server-start config/server.properties
+2. Start Kafka server: (pwd=<path-to-kafka>/kafka_2.11-2.3.0/)<br>
+   bin/kafka-server-start config/server.properties
 
 3. Ingest data into topic:<br>
    python kafka_server.py
@@ -38,6 +38,10 @@ Screenshots can be found in screenshots.zip
 ### Count Output
 
 ![](screenshots/count-output-batch-6.png)
+
+### Consumer server output
+
+![](screenshots/consumer-server-output.png)
 
 ## Questions of Step-3
 
