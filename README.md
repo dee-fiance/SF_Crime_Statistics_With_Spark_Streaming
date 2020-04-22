@@ -37,3 +37,15 @@ Provide statistical analysis of San Francisco crime incidents data using Apache 
 ### Count Output
 
 ![](screenshots/count-output-batch-6.png)
+
+## Questions of Step-3
+
+1. How did changing values on the SparkSession property parameters affect the throughput and latency of the data?<br>
+   Experimented with two SparkSession properties to get good throughput and low latency. <br>The properties are "maxOffsetsPerTrigger" and "maxRatePerPartition". <br>I referred to "processedRowsPerSecond", which is indicative of number of rows processed in a second. The higher the number, greater is the throughput and lower latency.
+   
+2. What were the 2-3 most efficient SparkSession property key/value pairs? Through testing multiple variations on values, how can you tell these were the most optimal?<br>
+   Most efficient SparkSession properties were:
+   1. spark.streaming.kafka.maxRatePerPartition => set the maximum rate for each partition.
+   2. spark.default.parallelism
+   3. spark.sql.shuffle.partitions <br>
+   The goal I had is to get higher "processedRowsPerSecond".
